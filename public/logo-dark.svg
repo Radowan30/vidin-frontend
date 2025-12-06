@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" width="280" height="80">
+  <defs>
+    <!-- Main gradient for the abstract icon - blue to pink -->
+    <linearGradient id="iconGradientD1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="50%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+    <linearGradient id="iconGradientD2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="50%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#f472b6"/>
+    </linearGradient>
+    <linearGradient id="iconGradientD3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0abfc"/>
+      <stop offset="50%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <!-- Text gradient for "In" -->
+    <linearGradient id="textGradientD" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#d946ef"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Abstract flowing play button icon -->
+  <g transform="translate(5, 8)">
+    <!-- Outer flowing shape - top wave -->
+    <path d="M35 5 Q55 -5 65 15 Q75 35 55 45 Q35 55 25 40 Q15 25 35 5" 
+          fill="url(#iconGradientD1)" opacity="0.9"/>
+    
+    <!-- Middle flowing shape -->
+    <path d="M20 25 Q40 10 55 25 Q70 40 50 55 Q30 70 15 50 Q0 30 20 25" 
+          fill="url(#iconGradientD2)" opacity="0.85"/>
+    
+    <!-- Inner flowing shape - bottom wave -->
+    <path d="M30 35 Q50 20 60 40 Q70 60 45 65 Q20 70 15 50 Q10 30 30 35" 
+          fill="url(#iconGradientD3)" opacity="0.8"/>
+    
+    <!-- Play triangle hint in center -->
+    <path d="M32 30 L50 42 L32 54 Z" fill="white" opacity="0.95"/>
+    
+    <!-- Small accent dot -->
+    <circle cx="38" cy="18" r="4" fill="white" opacity="0.9"/>
+  </g>
+  
+  <!-- "Vid" text - dark for light theme -->
+  <text x="85" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="600" fill="#1e293b">Vid</text>
+  
+  <!-- "In" text - gradient -->
+  <text x="168" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="600" fill="url(#textGradientD)">In</text>
+</svg>
+
