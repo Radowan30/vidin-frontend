@@ -40,7 +40,7 @@ export default function TextInputPanel() {
 
   // Character count
   const charCount = text.length;
-  const maxChars = 3000;
+  const maxChars = 1500;
 
   return (
     <motion.div
@@ -96,15 +96,20 @@ What's the best advice you've received about product development?"
           />
 
           {/* Character count */}
-          <div className="absolute bottom-3 right-3 text-xs text-gray-400">
+          <div className={`absolute bottom-3 right-3 text-xs ${
+            charCount > maxChars * 0.9 
+              ? charCount >= maxChars 
+                ? "text-red-500 font-semibold" 
+                : "text-yellow-500" 
+              : "text-gray-400"
+          }`}>
             {charCount}/{maxChars}
           </div>
         </div>
 
         {/* Recommendation note */}
         <p className="mt-2 text-sm italic text-gray-500 dark:text-gray-400">
-          💡 A text length of around 300 words is advised to achieve the best
-          results
+          💡 Keep your text under 1,500 characters (~200 words) for best results
         </p>
 
         {/* Aspect ratio and generate button row */}
